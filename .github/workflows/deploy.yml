@@ -24,8 +24,10 @@ jobs:
       - name: Install ESLint
         run: npm install eslint --save-dev
 
-      - name: Lint JavaScript Files
-        run: npx eslint js/
+      - name: Give ESLint Permission & Run Linter
+        run: |
+          chmod +x ./node_modules/.bin/eslint
+          npx eslint js/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
