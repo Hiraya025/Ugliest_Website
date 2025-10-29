@@ -1,6 +1,6 @@
 // Dark mode toggle with localStorage memory
 const themeToggle = document.getElementById("theme-toggle");
-const currentTheme = localStorage.getItem("theme")
+const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme === "dark") {
   document.body.classList.add("dark-mode");
