@@ -1,0 +1,185 @@
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #333;
+  --primary-color: #2a6efc;
+  --accent-color: #ffb400;
+  --card-bg: #ffffff;
+}
+
+/* 🌙 Dark mode colors */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --card-bg: #1e1e1e;
+  --primary-color: #4f8cff;
+  --accent-color: #ffc857;
+}
+
+/* Base styles */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background-color: white;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+  background-color: var(--accent-color);
+  color: #222;
+  transform: scale(1.05);
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  border-left: 5px solid var(--primary-color);
+  padding-left: 0.6rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/* Screenshot styling */
+.image-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.screenshot {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.7rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  margin-top: 3rem;
+  border-top: 5px solid var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 1rem 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .toggle-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .screenshot {
+    border-radius: 6px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
