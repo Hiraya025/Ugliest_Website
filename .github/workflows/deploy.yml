@@ -3,7 +3,7 @@ name: Deploy Static Site
 on:
   push:
     branches:
-      - main  # Change to your default branch if needed
+      - main
   pull_request:
     branches:
       - main
@@ -24,16 +24,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install ESLint
-        run: npm install eslint --save-dev
+      - name: Install Dependencies
+        run: npm install eslint @eslint/js globals --save-dev
 
-      - name: Give ESLint Permission & Run Linter
+      - name: Lint JavaScript Files
         run: |
           chmod +x ./node_modules/.bin/eslint
           npx eslint js/
 
+      # Optional: stop deployment if lint fails automatically handled above
       - name: Deploy to GitHub Pages
+        if: success()   # Only runs if lint passes
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .  # Root folder (your HTML/CSS/JS files)
+          publish_dir: .  # root of your static site
