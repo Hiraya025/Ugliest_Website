@@ -4,12 +4,10 @@ let confettiTimeout; // To clear previous confetti if needed
 
 function generateConfetti() {
   // Create a new canvas element for confetti
-  const canvas = document.createElement('canvas');
-  canvas.id = 'confetti-canvas';
-  const body = document.body; // Append to the body to cover the entire page
-  body.appendChild(canvas); // Append the canvas to the body
-
-  const ctx = canvas.getContext('2d');
+  const canvas = document.createElement("canvas");
+  const mainContent = document.querySelector("main");
+  mainContent.appendChild(canvas); // Append the canvas inside the content area
+  const ctx = canvas.getContext("2d");
 
   // Set canvas size to match the full window size (viewport size)
   let W = window.innerWidth;
@@ -18,7 +16,7 @@ function generateConfetti() {
   canvas.height = H;
 
   const confetti = [];
-  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'];
+  const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff"];
 
   function createConfetti() {
     for (let i = 0; i < 300; i++) {
@@ -56,10 +54,10 @@ function generateConfetti() {
 window.onload = generateConfetti;
 
 // Add functionality to trigger confetti on button click
-const confettiButton = document.getElementById('show-confetti-btn');
-confettiButton.addEventListener('click', () => {
+const confettiButton = document.getElementById("show-confetti-btn");
+confettiButton.addEventListener("click", () => {
   clearInterval(confettiTimeout);  // Clear any existing confetti effect
-  const canvas = document.getElementById('confetti-canvas');
+  const canvas = document.getElementById("confetti-canvas");
   if (canvas) {
     canvas.remove();  // Remove the existing confetti canvas from the page
   }
