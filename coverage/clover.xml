@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1762312074288" clover="3.2.0">
-  <project timestamp="1762312074288" name="All files">
-    <metrics statements="19" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="2" elements="29" coveredelements="19" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
+<coverage generated="1762312278541" clover="3.2.0">
+  <project timestamp="1762312278541" name="All files">
+    <metrics statements="19" coveredstatements="13" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="1" elements="29" coveredelements="16" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
     <file name="script.js" path="/home/runner/work/Ugliest_Website/Ugliest_Website/js/script.js">
-      <metrics statements="19" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="2"/>
+      <metrics statements="19" coveredstatements="13" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="5" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="6" count="0" type="stmt"/>
       <line num="7" count="0" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
-      <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="21" count="2" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
       <line num="25" count="1" type="stmt"/>
       <line num="27" count="1" type="stmt"/>
       <line num="28" count="0" type="stmt"/>
