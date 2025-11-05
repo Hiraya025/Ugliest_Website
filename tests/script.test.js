@@ -23,11 +23,11 @@ describe("JavaScript Functions", () => {
     expect(themeToggle.textContent).toBe("🌙 Dark Mode");
   });
 
-  // ❌ Failing Test (intentional)
-  test("Theme toggle starts with Dark Mode (intentional fail)", () => {
-    const themeToggle = document.getElementById("theme-toggle");
+//   // ❌ Failing Test (intentional)
+//   test("Theme toggle starts with Dark Mode (intentional fail)", () => {
+//     const themeToggle = document.getElementById("theme-toggle");
 
-    // This will fail since it actually starts as Light Mode
-    expect(themeToggle.textContent).toBe("🌙 Dark Mode");
-  });
+//     // This will fail since it actually starts as Light Mode
+//     expect(themeToggle.textContent).toBe("🌙 Dark Mode");
+//   });
 });
