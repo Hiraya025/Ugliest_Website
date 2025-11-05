@@ -1,9 +1,9 @@
 :root {
   --bg-color: #f4f6f8;
   --text-color: #333;
-  --primary-color: #2a6efc;
-  --accent-color: #ffb400;
-  --card-bg: #ffffff;
+  --primary-color: #2a6efc; /* Primary blue color */
+  --accent-color: #ffb400;  /* Accent color */
+  --card-bg: #ffffff;      /* White background for content */
 }
 
 /* 🌙 Dark mode colors */
@@ -107,13 +107,72 @@ h2 {
   color: #555;
 }
 
-/* Lists */
-ul, ol {
-  padding-left: 1.5rem;
+/* Hover to reveal */
+.hover-reveal {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-li {
-  margin-bottom: 0.7rem;
+.hover-reveal:hover {
+  opacity: 1;
+}
+
+/* Floating elements (parallax effect) */
+.image-container, .screenshot {
+  position: relative;
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Scroll reveal animation */
+h2, .caption {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+h2.scroll-reveal, .caption.scroll-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Confetti canvas styling */
+#confetti-canvas {
+  position: fixed;    /* Fixes the canvas to the viewport */
+  top: 0;
+  left: 0;
+  pointer-events: none;  /* Ensures the canvas doesn’t block other elements */
+  z-index: 1000;         /* Keeps the confetti on top of other content */
+  width: 100%;           /* Ensures it covers the full width */
+  height: 100%;          /* Ensures it covers the full height */
+}
+
+/* Button styling */
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
 }
 
 /* Footer */

@@ -21,4 +21,15 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", theme);
 });
 
-console.log("Page loaded successfully");
+// Scroll reveal functionality
+const revealElements = document.querySelectorAll("h2, .caption");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("scroll-reveal");
+    }
+  });
+}, { threshold: 0.5 });
+
+revealElements.forEach((el) => observer.observe(el));
